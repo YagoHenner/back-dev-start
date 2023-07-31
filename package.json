@@ -1,0 +1,31 @@
+{
+  "name": "back-dev-start",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "server": "set NODE_ENV=production && node src/server.js",
+    "test": "set NODE_ENV=test && jest --detectOpenHandles --forceExit",
+    "start:prod": "yarn pm2:production && yarn pm2:logs",
+    "build": "rimraf ./dist && tsc"
+  },
+  "repository": "",
+  "author": "Yago Henner",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "rimraf": "^5.0.1",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.2"
+  }
+}
